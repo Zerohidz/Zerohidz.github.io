@@ -1,0 +1,289 @@
+/* New styles for seat allocation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Ensure date and time inputs are styled consistently */
+input[type="date"], input[type="time"] {
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: opacity(0.6);
+    transition: filter 0.3s;
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator,
+input[type="time"]:hover::-webkit-calendar-picker-indicator {
+    filter: opacity(1);
+}
+
+.time-range {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.time-range input {
+    flex: 1;
+}
+
+.cabin-classes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: normal;
+}
+
+.checkbox-label:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkbox-label span {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.status.waiting {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.searching {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.status.found {
+    background: #d4edda;
+    color: #155724;
+    animation: pulse 1s infinite;
+}
+
+.status.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.results {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.train-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.train-item h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.train-item p {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.availability {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.availability.sold-out {
+    background: #dc3545;
+}
+
+.train-item.sold-out {
+    opacity: 0.7;
+    border-left-color: #dc3545;
+}
+
+small {
+    display: block;
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.allocated-seat-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    color: #155724;
+}
+
+.allocated-seat-info h3 {
+    margin-top: 0;
+    color: #155724;
+    border-bottom: 1px solid #c3e6cb;
+    padding-bottom: 10px;
+}
+
+.seat-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #28a745;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #28a745;
+}
+
+.release-btn {
+    background: #dc3545;
+    color: white;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.release-btn:hover {
+    background: #c82333;
+}
+
+.timer-alert {
+    font-size: 0.9em;
+    color: #856404;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+

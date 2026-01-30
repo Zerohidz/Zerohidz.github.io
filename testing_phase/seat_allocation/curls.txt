@@ -1,0 +1,61 @@
+seat_check (trainId ile istek atmamız lazım, o yüzden available seat bulduğumuz train'in Id'sini almayı unutmayalım):
+curl 'https://web-api-prod-ytp.tcddtasimacilik.gov.tr/tms/seat-maps/load-by-train-id?environment=dev&userId=1' \
+  --compressed \
+  -X POST \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: tr' \
+  -H 'Accept-Encoding: gzip, deflate, br, zstd' \
+  -H 'Authorization: bizim_token' \
+  -H 'unit-id: 3895' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://ebilet.tcddtasimacilik.gov.tr' \
+  -H 'Sec-GPC: 1' \
+  -H 'Connection: keep-alive' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'DNT: 1' \
+  --data-raw '{"fromStationId":796,"toStationId":98,"trainId":124042,"legIndex":0}'
+
+
+allocate_seat:
+curl 'https://web-api-prod-ytp.tcddtasimacilik.gov.tr/tms/inventory/select-seat?environment=dev&userId=1' \
+  --compressed \
+  -X POST \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: tr' \
+  -H 'Accept-Encoding: gzip, deflate, br, zstd' \
+  -H 'Authorization: bizim_token' \
+  -H 'unit-id: 3895' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://ebilet.tcddtasimacilik.gov.tr' \
+  -H 'Sec-GPC: 1' \
+  -H 'Connection: keep-alive' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'DNT: 1' \
+  -H 'Priority: u=0' \
+  --data-raw '{"trainCarId":613363,"fromStationId":796,"toStationId":98,"gender":"M","seatNumber":"12D","passengerTypeId":0,"totalPassengerCount":1,"fareFamilyId":0}'
+
+
+deallocate_seat:
+curl 'https://web-api-prod-ytp.tcddtasimacilik.gov.tr/tms/inventory/release-seat?environment=dev&userId=1' \
+  -X POST \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: tr' \
+  -H 'Accept-Encoding: gzip, deflate, br, zstd' \
+  -H 'Authorization: bizim_token' \
+  -H 'unit-id: 3895' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://ebilet.tcddtasimacilik.gov.tr' \
+  -H 'Sec-GPC: 1' \
+  -H 'Connection: keep-alive' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  --data-raw '{"trainCarId":613052,"allocationId":"1d6ebb40-067f-46e0-bd18-9c3d490ea1be","seatNumber":"15C"}'
+

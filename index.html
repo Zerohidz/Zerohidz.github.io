@@ -1,135 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | zerohidz</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Tren Bileti Bulucu</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>My Projects</h1>
-            <p class="subtitle">Software Development Portfolio</p>
-            <div class="social-links">
-                <a href="https://github.com/zerohidz" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://zerohidz.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
-                <!-- Other social media links can be added here -->
+    <div class="container">
+        <h1>🚄 Tren Bileti Bulucu</h1>
+        
+        <div class="form-group">
+            <label>Kalkış İstasyonu</label>
+            <select id="departureStation">
+                <option value="">İstasyon yükleniyor...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Varış İstasyonu</label>
+            <select id="arrivalStation">
+                <option value="">İstasyon yükleniyor...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Tarih</label>
+            <input type="date" id="departureDate" value="2026-01-19">
+        </div>
+
+        <div class="form-group">
+            <label>Aramak İstediğiniz Sınıflar</label>
+            <div class="cabin-classes">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="cabinEconomy" value="ECONOMY" checked>
+                    <span>Ekonomi</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="cabinBusiness" value="BUSINESS">
+                    <span>Business</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="cabinSleeper" value="SLEEPER">
+                    <span>Yataklı (Kuşet)</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="cabinCouchette" value="COUCHETTE">
+                    <span>Örtülü Kuşet</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="cabinLoca" value="LOCA">
+                    <span>Loca (Özel Kabin)</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="cabinDisabled" value="DISABLED">
+                    <span>Engelli (Tekerlekli Sandalye)</span>
+                </label>
             </div>
         </div>
-    </header>
 
-    <main class="container">
-        <section class="projects">
-            <h2>Software Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>NorthwindBackend</h3>
-                    <p>A safe and flexible .NET WebAPI system developed using EntityFramework</p>
-                    <div class="technologies">
-                        <span class="tech-tag">.NET</span>
-                        <span class="tech-tag">WebAPI</span>
-                        <span class="tech-tag">EntityFramework</span>
-                    </div>
-                    <a href="https://github.com/zerohidz/NorthwindBackend" class="project-link" target="_blank">GitHub <i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>ZeroInputs</h3>
-                    <p>A lightweight Windows input API wrapper developed using C#</p>
-                    <div class="technologies">
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Windows API</span>
-                    </div>
-                    <a href="https://github.com/zerohidz/ZeroInputs" class="project-link" target="_blank">GitHub <i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>VideoContentAnalyzer</h3>
-                    <p>A console application that tests input video for inappropriate frames using Azure Content Safety API</p>
-                    <div class="technologies">
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Azure</span>
-                    </div>
-                    <a href="https://github.com/zerohidz/VideoContentAnalyzer" class="project-link" target="_blank">GitHub <i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>GuestGrouper</h3>
-                    <p>A .NET Blazor WebApp used for dividing guests into groups according to their common interests in an event</p>
-                    <div class="technologies">
-                        <span class="tech-tag">.NET</span>
-                        <span class="tech-tag">Blazor</span>
-                        <span class="tech-tag">MVVM</span>
-                    </div>
-                    <a href="https://github.com/zerohidz/GuestGrouper" class="project-link" target="_blank">GitHub <i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Human Resources</h3>
-                    <p>A game prototype developed using Unity and C#</p>
-                    <div class="technologies">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                    </div>
-                    <a href="https://zerohidz.itch.io/insan-kaynaklari-prototip" class="project-link" target="_blank">itch.io <i class="fas fa-external-link-alt"></i></a>
-                </div>
+        <div class="form-group">
+            <label>Saat Aralığı (Filtreleme için)</label>
+            <div class="time-range">
+                <input type="time" id="timeStart" value="00:00">
+                <span>-</span>
+                <input type="time" id="timeEnd" value="23:59">
             </div>
-        </section>
-
-        <section class="projects">
-            <h2>Game Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Gladiohind</h3>
-                    <p>A short platformer game made for the Pumpkin Jam with the theme "Leave it behind".</p>
-                    <div class="technologies">
-                        <span class="tech-tag">2D</span>
-                        <span class="tech-tag">Pixel Art</span>
-                        <span class="tech-tag">Platformer</span>
-                    </div>
-                    <a href="https://zerohidz.itch.io/gladiohind" class="project-link" target="_blank">itch.io <i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>1 Kelime 1 İşlem Konsol Online</h3>
-                    <p>A multiplayer word game with server and client components.</p>
-                    <div class="technologies">
-                        <span class="tech-tag">Multiplayer</span>
-                        <span class="tech-tag">Word Game</span>
-                    </div>
-                    <a href="https://zerohidz.itch.io/1-kelime-1-lem-konsol-online-v1" class="project-link" target="_blank">itch.io <i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Mysteries Of The Art Gallery</h3>
-                    <p>"Gizli saklı hayalleri ancak hayalperest bir çocuk ortaya çıkarabilir." A game created for PURA GAMEJAM '22.</p>
-                    <div class="technologies">
-                        <span class="tech-tag">2D</span>
-                        <span class="tech-tag">Adventure</span>
-                    </div>
-                    <a href="https://zerohidz.itch.io/mysteriesoftheartgallery" class="project-link" target="_blank">itch.io <i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>SurviveTheOcean</h3>
-                    <p>A survival game about protecting fish and the ocean. Submission to SEAJAM - #TeamSeas Game Jam.</p>
-                    <div class="technologies">
-                        <span class="tech-tag">2D</span>
-                        <span class="tech-tag">Survival</span>
-                        <span class="tech-tag">Singleplayer</span>
-                    </div>
-                    <a href="https://zerohidz.itch.io/survivetheocean" class="project-link" target="_blank">itch.io <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 zerohidz. All rights reserved.</p>
         </div>
-    </footer>
+
+        <button id="startBtn" onclick="startSearch()">Aramayı Başlat</button>
+        <button id="stopBtn" onclick="stopSearch()" disabled>Aramayı Durdur</button>
+        <button id="stopMusicBtn" onclick="stopMusic()" disabled style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">🔇 Müziği Durdur</button>
+
+        <div id="status" class="status waiting">
+            Hazır. Aramayı başlatmak için butona basın.
+        </div>
+
+        <div id="results" class="results"></div>
+
+        <div id="allocatedSeatInfo" class="allocated-seat-info" style="display: none;">
+            <h3>🎫 Tutulan Koltuk</h3>
+            <div id="allocatedSeatDetails"></div>
+            <button id="releaseSeatBtn" class="release-btn">Koltuğu Serbest Bırak</button>
+        </div>
+
+        <small>
+            Her 5 saniyede bir otomatik kontrol edilir.<br>
+            Boş koltuk bulunduğunda ses çalar! 🔔
+        </small>
+    </div>
+
+    <audio id="alertSound" preload="auto">
+        <!-- Base64 encoded beep sound -->
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBTGH0fPTgjMGHm7A7+OZTR4LVKzn77BiFwtIn9/vxmocBjiI0/TWfyoEKHzL8OGcTAwRXbbr7aleGQxJod/pvmMdCS9+zfDajzAHI3fJ7+aiUxMOV7Dr8bJgFwtEmt/uzGwdCS1+yfLYhiwELHrN8t6XSQwPXLnq7axYEgtBmN7swGUbByyCzPHWhCoDKXnI7+OeUBILVa7p8bZfGQtCm9/qx2YcCCyAy/DZhSkELX3O8uCVRwwRW77rp7qpWEgs/lt7qwmQaBSt9y/DWhSsDKXrI7+GeUhEMU6zn77FdGQ1DnN7pxGYcCCuAyvDYhSoDKnnK8OCUSwsRXLrp7apXEgtBmd7qwWQaByqAyvLWhywBKHbG7t+dURELUqvm7rFeHQxFnN7px2UdByx+zPDahysEKHjJ8N+bUw4NVrDn8bVgFgtDn97ryGwdByx/vfLZgysGJ3nH8OGbTw0PVq/o8LJfFgtDnt/qxGUdBytxy/HYgykFJnfH7+CcUBELVKzn761dFwxHnt/pw2MaCyx8y/HXhSoFJ3fH7+CXTw4NUq3m77FcGQxGnN3pv2IaCyt9y/HYhywCKnjJ7+GdURQOVrDp8LFfFwtGn97rz20gBi59yPDXhSoDJ3zJ7+GWUhMLVKvl67FdGwtBlt3qwGIaCix9y/HYgysEKHnJ8OKgURgPUq7m7q1bFApDld3qvmMZCCx+y/LVhioFK3zN8eCaTBAMUqvm7rJeFwtEnt/ryWwdByx9y/HYhCsEJ3nK8OGZUBILVKzn77JeGQtDnd3pwGIaCy1/zPHXhCsCJ3vK8OCbURELUqzl7q5ZFAo/ltzoumEaBy5/zPHYhCoDKHjJ7+CdURINUqzl765bFApEnt7sxmsUBzB+y/DYhCkEKHjI79+bUBEMUqrl7q5ZGQtDm9zpwGQcCC1+y/LbhiwEKHnG79qaUBEOUq3n7q1aFQxGmt3rv2MaBS5+y/HYhywDE3vJ79iaUhYOUavk7KhYGgxGmdzsxmwZCCx9y/PahSkDKnvI79meUhENUqvk7alaFApCldvov2IaCy1+yvHahSoDKXrH8N6ZURYMUK3l7a1ZFgxDmd3ov2IaCy1/y/HZhysDKHjH79+bUhILU6zm7qxZFgtEnt3qwmUcByuBzPDYhSoDJ3nH7+CdURINVK3m765bFApDmdzsv2MaBy5+yvHYhSoDJ3rI7t+bUhELU6zl7a1aFQxEmt3qv2QbByuBzPDagykEJ3jG7t6aUhINUqzk7a1bFgxGmt3ruGMaBy5/y/HYhSgEJ3nI79+bTBELVKzl7KpZFwtEmt3qwGQdByp9y/DYhCoDKHrI7t+dURMMUavk7a1bFApEmt3ru2IbCC1+yvHahSl/" type="audio/wav">
+    </audio>
+
+    <!-- Main application script -->
+    <script type="module" src="./src/js/main.js"></script>
 </body>
-</html> 
+</html>
