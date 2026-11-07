@@ -55,8 +55,8 @@ ${header(profiles, 'Profiller')}
 <main>
   <section class="hero">
     <p class="prompt mono"><span class="ps1">zerohidz@home</span>:<span class="cwd">~</span>$ whoami</p>
-    <h1>Yaptığım her şey <span class="hl">tek</span> sayfada.</h1>
-    <p class="lede">Ben zerohidz, bilgisayar mühendisiyim. Burası <a href="https://blog.zerohidz.com/">blogum</a>, uygulamalarım, oyunlarım ve sunucularım için giriş kapısı.</p>
+    <h1>Merhaba, ben <span class="hl">zerohidz</span>.</h1>
+    <p class="lede">Bilgisayar mühendisiyim. Yaptığım uygulama ve oyunlar aşağıda, yazılarım <a href="https://blog.zerohidz.com/">blogda</a>.</p>
     <p class="bits mono" aria-hidden="true">0x7A 0x65 0x72 0x6F 0x68 0x69 0x64 0x7A</p>
   </section>
   <section>
@@ -74,10 +74,10 @@ const repoUrl = 'https://github.com/Zerohidz/local-youtube-history';
 const zipUrl = `${repoUrl}/archive/refs/heads/main.zip`;
 
 const features = [
-    ['Konumunu kaydeder', 'Video oynarken her 5 saniyede bir kaldığın yeri not eder. Reklamları saymaz.'],
-    ['Kaldığın yerden açar', 'Aynı videoya döndüğünde hiçbir şeye tıklamadan oraya sarar.'],
-    ['Bitenleri unutur', 'Videoyu bitirdiğinde kaydı siler, sonraki açışında baştan başlar.'],
-    ['Kendini temizler', '90 günden eski kayıtları kendiliğinden siler.'],
+    ['Kaydetme', 'Video oynarken her 5 saniyede bir nerede olduğunu kaydeder. Reklamlar sayılmaz.'],
+    ['Devam etme', 'Videoyu tekrar açtığında kaydedilen yere sarar.'],
+    ['Biten videolar', 'Videoyu bitirdiğinde kaydı silinir.'],
+    ['Eski kayıtlar', '90 günden eski kayıtlar silinir.'],
 ];
 
 const steps = [
@@ -97,8 +97,8 @@ ${header([{ label: 'github', url: repoUrl }], 'Bağlantılar')}
 <main>
   <section class="hero">
     <p class="prompt mono"><span class="ps1">zerohidz@home</span>:<span class="cwd">~</span>$ ./youtube-resume</p>
-    <h1>Videoya <span class="hl">kaldığın</span> yerden dön.</h1>
-    <p class="lede">YouTube Resume, izlediğin videoların konumunu hatırlayan küçük bir tarayıcı eklentisi. Hesap yok, sunucu yok, her şey tarayıcında kalır.</p>
+    <h1><span class="hl">YouTube</span> Resume</h1>
+    <p class="lede">YouTube videolarını kaldığın yerden açan bir tarayıcı eklentisi. Hesap istemez, kayıtlar sadece kendi tarayıcında durur.</p>
     <p class="cta"><a class="button" href="#kurulum">Kur</a><a class="button ghost" href="${repoUrl}">Kaynak kod ↗</a></p>
   </section>
   <section class="player" aria-hidden="true">
@@ -116,14 +116,14 @@ ${header([{ label: 'github', url: repoUrl }], 'Bağlantılar')}
   <section class="listing">
     <h2 class="section-label mono"><span>$ cat gizlilik.md</span></h2>
     <div class="prose-block">
-      <p>İzleme konumun yalnızca tarayıcının yerel depolama alanında tutulur, hiçbir yere gönderilmez. Bu yüzden kayıtlar başka bir tarayıcıya ya da cihaza geçmez.</p>
-      <p>Eklentinin istediği izinler <code>storage</code>, <code>alarms</code> ve <code>youtube.com</code> erişiminden ibaret. Kodun tamamı <a href="${repoUrl}">GitHub'da</a>.</p>
+      <p>Kayıtlar tarayıcının yerel depolamasında durur, hiçbir sunucuya gitmez. Bu yüzden başka bir tarayıcıda ya da cihazda görünmez.</p>
+      <p>İstediği izinler: <code>storage</code>, <code>alarms</code> ve <code>youtube.com</code>. Kodu <a href="${repoUrl}">GitHub'da</a>.</p>
     </div>
   </section>
   <section class="listing" id="kurulum">
     <h2 class="section-label mono"><span>$ cat kurulum.md</span></h2>
     <ol class="steps">${stepItems}</ol>
-    <p class="note">Chrome, Edge ve Brave gibi Chromium tabanlı tarayıcılarda çalışır. Eklenti mağazada olmadığı için güncellemeleri elle indirmen gerekir.</p>
+    <p class="note">Chromium tabanlı tarayıcılarda çalışır. Mağazada olmadığı için yeni sürümü elle indirmen gerekir.</p>
   </section>
   <p class="disclaimer mono">Bu proje YouTube ya da Google ile bağlantılı değildir.</p>
 </main>

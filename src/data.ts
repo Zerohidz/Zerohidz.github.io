@@ -47,7 +47,7 @@ export const sites: Site[] = [
     {
         host: 'zmanga.zerohidz.com',
         title: 'Kavita',
-        summary: 'Kendi sunucumda çalışan okuma kütüphanem.',
+        summary: 'Manga ve kitap sunucum.',
         tags: ['sunucu'],
         private: true,
     },
@@ -62,7 +62,7 @@ export const games: Project[] = [
 ];
 
 export const software: Project[] = [
-    { name: 'local-youtube-history', summary: 'YouTube videolarını kaldığın yerden sürdüren, veriyi yerelde tutan tarayıcı eklentisi.', url: '/local-youtube-history/', source: 'site' },
+    { name: 'local-youtube-history', summary: 'YouTube videolarını kaldığın yerden açan tarayıcı eklentisi.', url: '/local-youtube-history/', source: 'site' },
     { name: 'NorthwindBackend', summary: 'EntityFramework ile .NET WebAPI sistemi.', url: 'https://github.com/Zerohidz/NorthwindBackend', source: 'github' },
     { name: 'ZeroInputs', summary: 'C# ile hafif bir girdi API sarmalayıcısı.', url: 'https://github.com/Zerohidz/ZeroInputs', source: 'github' },
     { name: 'VideoContentAnalyzer', summary: 'Azure Content Safety ile videolarda uygunsuz kare arayan konsol uygulaması.', url: 'https://github.com/Zerohidz/VideoContentAnalyzer', source: 'github' },
