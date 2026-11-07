@@ -26,28 +26,28 @@ export const profiles = [
 export const sites: Site[] = [
     {
         host: 'blog.zerohidz.com',
-        icon: '/icons/blog.svg',
+        icon: '/project-icons/blog.svg',
         title: 'zerohidz/blog',
         summary: 'Bir bilgisayar mühendisinin not defteri: mekanizmalar, zihinsel modeller ve hayatın tersine mühendisliği.',
         tags: ['yazı'],
     },
     {
         host: 'beg.zerohidz.com',
-        icon: '/icons/beg.svg',
+        icon: '/project-icons/beg.svg',
         title: 'BegController',
         summary: 'Küçük arkadaş grupları için hesap-verebilirlik uygulaması. Puanını sen değil, eşin girer.',
         tags: ['uygulama'],
     },
     {
         host: 'birnefes.zerohidz.com',
-        icon: '/icons/birnefes.svg',
+        icon: '/project-icons/birnefes.svg',
         title: 'Bir Nefes',
         summary: 'Ekrandan önce 30 saniye. Telefon ve Chrome aynı günlük hakları paylaşır.',
         tags: ['uygulama', 'android', 'chrome'],
     },
     {
         host: 'skywipe.zerohidz.com',
-        icon: '/icons/skywipe.svg',
+        icon: '/project-icons/skywipe.svg',
         title: 'Skywipe',
         summary: '2–4 arkadaş, rüzgârda sallanan gondolda gökdelen camı siler.',
         tags: ['oyun', 'co-op'],
@@ -62,7 +62,7 @@ export const sites: Site[] = [
     },
     {
         host: 'zmanga.zerohidz.com',
-        icon: '/icons/kavita.png',
+        icon: '/project-icons/kavita.png',
         title: 'Kavita',
         summary: 'Manga ve kitap sunucum.',
         tags: ['sunucu'],
@@ -71,16 +71,16 @@ export const sites: Site[] = [
 ];
 
 export const games: Project[] = [
-    { name: 'Gladiohind', icon: '/icons/gladiohind.png', summary: 'Pumpkin Jam için yapılmış kısa bir platform oyunu.', url: 'https://zerohidz.itch.io/gladiohind', source: 'itch.io' },
-    { name: '1 Kelime 1 İşlem Konsol Online', icon: '/icons/1-kelime.png', summary: 'Sunucu ve istemcisiyle çok oyunculu kelime oyunu.', url: 'https://zerohidz.itch.io/1-kelime-1-lem-konsol-online-v1', source: 'itch.io' },
-    { name: 'Mysteries Of The Art Gallery', icon: '/icons/art-gallery.png', summary: "PURA GAMEJAM '22 için yapılan oyun.", url: 'https://zerohidz.itch.io/mysteriesoftheartgallery', source: 'itch.io' },
-    { name: 'SurviveTheOcean', icon: '/icons/survive-the-ocean.svg', summary: 'Balıkları ve okyanusu koruma üzerine hayatta kalma oyunu. SEAJAM #TeamSeas.', url: 'https://zerohidz.itch.io/survivetheocean', source: 'itch.io' },
-    { name: 'İnsan Kaynakları', icon: '/icons/insan-kaynaklari.svg', summary: 'Unity ve C# ile yapılmış oyun prototipi.', url: 'https://zerohidz.itch.io/insan-kaynaklari-prototip', source: 'itch.io' },
+    { name: 'Gladiohind', icon: '/project-icons/gladiohind.png', summary: 'Pumpkin Jam için yapılmış kısa bir platform oyunu.', url: 'https://zerohidz.itch.io/gladiohind', source: 'itch.io' },
+    { name: '1 Kelime 1 İşlem Konsol Online', icon: '/project-icons/1-kelime.png', summary: 'Sunucu ve istemcisiyle çok oyunculu kelime oyunu.', url: 'https://zerohidz.itch.io/1-kelime-1-lem-konsol-online-v1', source: 'itch.io' },
+    { name: 'Mysteries Of The Art Gallery', icon: '/project-icons/art-gallery.png', summary: "PURA GAMEJAM '22 için yapılan oyun.", url: 'https://zerohidz.itch.io/mysteriesoftheartgallery', source: 'itch.io' },
+    { name: 'SurviveTheOcean', icon: '/project-icons/survive-the-ocean.svg', summary: 'Balıkları ve okyanusu koruma üzerine hayatta kalma oyunu. SEAJAM #TeamSeas.', url: 'https://zerohidz.itch.io/survivetheocean', source: 'itch.io' },
+    { name: 'İnsan Kaynakları', icon: '/project-icons/insan-kaynaklari.svg', summary: 'Unity ve C# ile yapılmış oyun prototipi.', url: 'https://zerohidz.itch.io/insan-kaynaklari-prototip', source: 'itch.io' },
 ];
 
 export const software: Project[] = [
-    { name: 'NorthwindBackend', icon: '/icons/northwind.svg', summary: 'EntityFramework ile .NET WebAPI sistemi.', url: 'https://github.com/Zerohidz/NorthwindBackend', source: 'github' },
-    { name: 'ZeroInputs', icon: '/icons/zeroinputs.svg', summary: 'C# ile hafif bir girdi API sarmalayıcısı.', url: 'https://github.com/Zerohidz/ZeroInputs', source: 'github' },
-    { name: 'VideoContentAnalyzer', icon: '/icons/video-analyzer.svg', summary: 'Azure Content Safety ile videolarda uygunsuz kare arayan konsol uygulaması.', url: 'https://github.com/Zerohidz/VideoContentAnalyzer', source: 'github' },
-    { name: 'GuestGrouper', icon: '/icons/guest-grouper.svg', summary: 'Etkinlik konuklarını ortak ilgi alanlarına göre gruplayan Blazor uygulaması.', url: 'https://github.com/Zerohidz/GuestGrouper', source: 'github' },
+    { name: 'NorthwindBackend', icon: '/project-icons/northwind.svg', summary: 'EntityFramework ile .NET WebAPI sistemi.', url: 'https://github.com/Zerohidz/NorthwindBackend', source: 'github' },
+    { name: 'ZeroInputs', icon: '/project-icons/zeroinputs.svg', summary: 'C# ile hafif bir girdi API sarmalayıcısı.', url: 'https://github.com/Zerohidz/ZeroInputs', source: 'github' },
+    { name: 'VideoContentAnalyzer', icon: '/project-icons/video-analyzer.svg', summary: 'Azure Content Safety ile videolarda uygunsuz kare arayan konsol uygulaması.', url: 'https://github.com/Zerohidz/VideoContentAnalyzer', source: 'github' },
+    { name: 'GuestGrouper', icon: '/project-icons/guest-grouper.svg', summary: 'Etkinlik konuklarını ortak ilgi alanlarına göre gruplayan Blazor uygulaması.', url: 'https://github.com/Zerohidz/GuestGrouper', source: 'github' },
 ];
