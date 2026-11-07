@@ -10,11 +10,16 @@ const themeToggle = `<button type="button" class="theme-toggle" aria-label="Tema
 function chip(site: Site): string {
     const tags = site.tags.map((tag) => `<span class="tag">#${tag}</span>`).join('');
     const lock = site.private ? '<span class="lock">giriş gerekli</span>' : '';
-    return `<a class="chip" href="https://${site.host}/">
+    return `<a class="chip" href="${site.href ?? `https://${site.host}/`}">
   <span class="chip-pins top" aria-hidden="true"></span>
   <span class="chip-body">
-    <span class="chip-id mono">${site.host}</span>
-    <span class="chip-title">${site.title}</span>
+    <span class="chip-head">
+      <img class="icon" src="${site.icon}" alt="" width="48" height="48" />
+      <span class="chip-name">
+        <span class="chip-id mono">${site.host}</span>
+        <span class="chip-title">${site.title}</span>
+      </span>
+    </span>
     <span class="chip-summary">${site.summary}</span>
     <span class="chip-meta mono">${tags}${lock}</span>
   </span>
@@ -24,6 +29,7 @@ function chip(site: Site): string {
 
 function row(project: Project): string {
     return `<li><a href="${project.url}">
+  <img class="icon" src="${project.icon}" alt="" width="32" height="32" loading="lazy" />
   <span class="row-name">${project.name}</span>
   <span class="row-summary">${project.summary}</span>
   <span class="row-source mono">${project.source} ↗</span>
@@ -55,7 +61,7 @@ ${header(profiles, 'Profiller')}
 <main>
   <section class="hero">
     <p class="prompt mono"><span class="ps1">zerohidz@home</span>:<span class="cwd">~</span>$ whoami</p>
-    <h1>Merhaba, ben <span class="hl">zerohidz</span>.</h1>
+    <h1>Selamunaleyküm! Ben <span class="hl">zerohidz</span>.</h1>
     <p class="lede">Bilgisayar mühendisiyim. Yaptığım uygulama ve oyunlar aşağıda, yazılarım <a href="https://blog.zerohidz.com/">blogda</a>.</p>
     <p class="bits mono" aria-hidden="true">0x7A 0x65 0x72 0x6F 0x68 0x69 0x64 0x7A</p>
   </section>

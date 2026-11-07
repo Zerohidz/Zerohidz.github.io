@@ -375,6 +375,32 @@ main {
 
 /* ---------- ana sayfa ---------- */
 
+.icon {
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.chip-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.chip-head .icon {
+  flex: none;
+}
+
+.chip-name {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.chip-id {
+  overflow-wrap: anywhere;
+}
+
 .chips {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
@@ -421,10 +447,10 @@ main {
 
 .rows a {
   display: grid;
-  grid-template-columns: 15rem 1fr auto;
-  align-items: baseline;
-  gap: 4px 20px;
-  padding: 14px 8px;
+  grid-template-columns: 32px 14rem 1fr auto;
+  align-items: center;
+  gap: 4px 16px;
+  padding: 12px 8px;
   text-decoration: none;
   transition: background-color 0.15s;
 }
@@ -722,11 +748,11 @@ main {
   }
 
   .rows a {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 32px 1fr auto;
   }
 
   .row-summary {
-    grid-column: 1 / -1;
+    grid-column: 2 / -1;
     grid-row: 2;
   }
 }
