@@ -1,4 +1,0 @@
-- [x] Diğer class'lardan da haberdar olma
-- [x] Bilet tutma ve serbest bırakma
-- [ ] React'a typescript'e geçiş
-- [ ] Select box'lar searchable olsun
