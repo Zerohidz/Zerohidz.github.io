@@ -53,6 +53,21 @@ export const sites: Site[] = [
         tags: ['oyun', 'co-op'],
     },
     {
+        host: 'biletbulucu.zerohidz.com',
+        icon: '/project-icons/biletbulucu.svg',
+        title: 'Bilet Bulucu',
+        summary: 'TCDD YHT bileti nöbetçisi. Dolu seferde yer açılınca bulur, koltuğu 10 dakikalığına senin için tutar.',
+        tags: ['uygulama', 'windows', 'linux'],
+    },
+    {
+        host: 'hifz-defteri.zerohidz.com',
+        icon: '/project-icons/hifz-defteri.svg',
+        title: 'Hıfz Defteri',
+        summary: 'Hafızlık için günlük ezber ve tekrar planı. Hoca, öğrencisinin defterini salt okunur görür.',
+        tags: ['uygulama'],
+        private: true,
+    },
+    {
         host: 'zerohidz.com/local-youtube-history',
         href: '/local-youtube-history/',
         icon: '/local-youtube-history.svg',
